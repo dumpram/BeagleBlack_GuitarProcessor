@@ -1,0 +1,2 @@
+echo "Building semaphore test!"
+gcc sem_test.c -lpthread -o test && echo "Building is successful!"

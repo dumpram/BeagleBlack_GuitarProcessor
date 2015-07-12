@@ -1,0 +1,2 @@
+echo "Building simple client for frequency recognition..."
+gcc -o freq_real_time freq_real_time.c `pkg-config --cflags --libs jack` -lfftw3 -lm && echo "Build is successful!"

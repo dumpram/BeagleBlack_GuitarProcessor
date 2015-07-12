@@ -1,0 +1,36 @@
+Removed Pin From Net: NetName=DGND Pin=C3-1
+Removed Pin From Net: NetName=3.3V Pin=C3-2
+Removed Pin From Net: NetName=DGND Pin=C6-1
+Removed Pin From Net: NetName=3.3V Pin=C6-2
+Removed Pin From Net: NetName=DGND Pin=C7-1
+Removed Pin From Net: NetName=3.3V Pin=C7-2
+Removed Pin From Net: NetName=3.3V Pin=D2-18
+Removed Pin From Net: NetName=3.3V Pin=D2-24
+Removed Pin From Net: NetName=DGND Pin=S1-2
+Removed Pin From Net: NetName=DGND Pin=S2-2
+Removed Pin From Net: NetName=DGND Pin=S3-2
+Removed Member From Class: ClassName=audio_cape_sch Member=C3
+Added Component: Designator=R1(6-0805_M)
+Added Component: Designator=R2(6-0805_M)
+Added Component: Designator=R3(6-0805_M)
+Added Pin To Net: NetName=AGND Pin=C6-1
+Added Pin To Net: NetName=AUD_3V3 Pin=C6-2
+Added Pin To Net: NetName=AGND Pin=C7-1
+Added Pin To Net: NetName=AUD_3V3 Pin=C7-2
+Added Pin To Net: NetName=AUD_3V3 Pin=D2-18
+Added Pin To Net: NetName=AUD_3V3 Pin=D2-24
+Added Pin To Net: NetName=DGND Pin=R1-2
+Added Pin To Net: NetName=DGND Pin=R2-2
+Added Pin To Net: NetName=DGND Pin=R3-2
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=S1-2
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR2_1 Pin=R2-1
+Added Pin To Net: NetName=NetR2_1 Pin=S2-2
+Added Net: Name=NetR2_1
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=S3-2
+Added Net: Name=NetR3_1
+Added Member To Class: ClassName=audio_cape_sch Member=Component R1 10k
+Added Member To Class: ClassName=audio_cape_sch Member=Component R2 10k
+Added Member To Class: ClassName=audio_cape_sch Member=Component R3 10k

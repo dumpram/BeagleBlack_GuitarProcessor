@@ -1,0 +1,3 @@
+apt-get install libjack-jackd2-0=1.9.8~dfsg.4+20120529git007cdc37-5+fixed1~raspbian1 apt-get install 
+libjack-jackd2-dev=1.9.8~dfsg.4+20120529git007cdc37-5+fixed1~raspbian1
+apt-get install jackd2=1.9.8~dfsg.4+20120529git007cdc37-5+fixed1~raspbian1

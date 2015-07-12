@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=DGND Pin=D2-33
+Change Component Description : Designator=D2 Old Description=Audio ADP/DAP New Description=
+Added Pin To Net: NetName=AGND Pin=D2-33

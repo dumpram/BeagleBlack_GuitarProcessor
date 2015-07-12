@@ -1,0 +1,243 @@
+Poglavlja
+
+1. Uvod
+
+	Ugradbeni računalni sustavi poput mobitela, dlanovnika i ostalih multimedijskih uređaja imaju sposobnost 
+	reprodukcije i snimanja zvuka. Cilj ovog završnog rada je razviti ugradbeni računalni sustav koji bi mogao reproducirati i snimati
+	zvuk te obrađivati zvuk u stvarnom vremenu. Sustav je zasnovan na BeagleBone Black platformi i audio kodeku
+	TLV320AIC3104. Idejna shema sustava prikazana je blok dijagramom:
+
+		-------------------------------------------------------------
+		-------------------------------------------------------------
+		-------------------------------------------------------------
+		-------------------------------------------------------------
+		-------------------------------------------------------------
+		-------------------------------------------------------------
+		-------------------------------------------------------------
+	
+	Središnji dio sustava je BeagleBone Black koji prikuplja podatke sa audio kodeka, komunicira sa sklopovljem i 
+	pokreće web poslužitelj kojem se može pristupiti preko ethernet sučelja. Zahtjev na obradu pročitanih uzoraka
+	u stvarnom vremenu i komunikacije sa periferijom mogu se ostvariti kroz UNIX operacijski sustav bez potrebe
+	za korištenjem RT kernel-a ili programabilnih jedinica za rad u stvarnom vremenu. Razvoj programske i hardverske
+	podrške za BeagleBone Black namijenjen je Debian distribuciji i linux kernelu 3.8+.
+	
+	Namjena ovakvog sustava je obrada signala sa zvučnih osjetila izlaznih otpora 10 kOhm-a - npr. dinamičkog mikrofona
+	sa zavojnicom ili električne gitare. Sustav bi omogućavao prikupljanje, obradu i reprodukciju u stvarnom vremenu. 
+	Primjena mu nije ograničena i može služiti za reprodukciju glazbe ili snimanje zvuka. Osim asimetričnog niskoomskog izlaza 
+	za slušalice(linijski zvučnici) (16 ohm) ima i diferencijalne visokoomske izlaze (red veličine 10-ak kohma - gitarska pojačala).
+
+	
+	
+
+2. Zvukovne mogućnosti i posebnosti Beaglebone Black platforme
+
+	BeagleBone Black platforma zasnovana je na aplikativnom procesoru Sitara AM3358 ARM Cortex-A8. Višekanalni
+	serijski zvučni priključak(eng. Multichannel Sound Audio serial port - McASP) omogućuje komunikaciju
+	AM3358 sa audio periferijama. AM3358 sadrži 2 McASP modula. McASP moduli omogućuju komunikaciju Inter-Integrated Sound(I2S), 
+	Time-Divison Multiplex(TDM), Digital Audio Interface(DIT) 
+	protokolima. Nadalje, McASP moduli sastavljeni su od prijamne i odašiljačke strane. Prijamna i odašiljačka strana
+	modula mogu raditi potpuno odvojeno, na različitim frekvencijama s različitim veličinama riječi, ali mogu 
+	biti i sinkronizirani. Kod nekih audio kodeka uzorci dolaze do kodeka u I2S-Left Justified modu, a moraju
+	se slati u I2S-Right justified modu. U tom slučaju razdešenost ritma između prijamne i odašiljačke strane
+	iznimno je korisna. 
+	
+	BeagleBone Black s pratećom UNIX distribucijom može reproducirati zvuk preko ugrađenog sklopovlja za HDMI sučelje.
+	Nakon instalacije najnovije Debian distribucije automatski se inicijalizira McASP modul i spojen je na "CHIP ZA
+	HDMI????". Da bi McASP modul mogli iskoristiti za komunikaciju sa audio kodekom potrebno je napraviti odgovarajući
+	device tree overlay kako bi se prilikom učitavanja kernala i DTB blobova, Alsa System on Chip upravljački program
+	pravilno inicijalizira McASP modul, mapira pinove, poveže odgovarajući I2C modul za komunikaciju sa kodekom. ASoC 
+	upravljački program pisan je za seriju audio kodeka TLV320AIC31x. Kako postoje sitne razlike između pojedinih kodeka
+	navedene serije u izvorni kod drivera nisu hardkodirane vrijednosti određenih registara, modova rada i slično. Specifičnosti
+	za rad kodeka navedene su posebnoj strukturi podataka koja se naziva device tree. U nastavku je analiziran izvorni
+	kod DEP-AUDIO-00A0.dts. Napisan je na temelju opisa drivera koje se mogu naći u pratećoj UNIX distribuciji. U konkretnoj
+	Debian distribuciji opis device tree overlay-a mogu se naći u /opt/source/dtb-3.14-ti/Bindings/sound/. 
+
+	Device Tree
+
+	Za razumijevanje kako se System on Chip sustavi povezuju sa operacijskim sustavom potrebno je razumjeti kako se
+	bootloader učitava kernel operacijskog sustava. Prije korištenja device tree-a kernel image je morao sadržavati opis
+	sklopovlja koje će biti spojeno na sustav. Takav opis sustava nalazio se u velikoj datoteci koja bila specifična za procesor i platformu. Device tree paradigma odvaja kernel image i opis sklopovlja u zasebne binarne datoteke. Na taj način upravljački programi se pišu 		neovisno o inačici uređaja koji se spaja na sustav, već samo preuzimaju podatke koji se nalaze u odgovarajućoj binarnoj datoteci. Na 		taj način razvijatelj sklopovlja ne mora znati kako upravljački program funkcionira da bi promijenio parametre koji određuju rad sklopovlja. 		Prilikom podizanja operacijskog sustava učitava se kernel i device tree. Promjene device tree rade se pomoću kompajliranih device tree 		fragmenata za pojedine 	dijelove sklopovlja koje želimo prenamijeniti, omogućiti ili onemogućiti. Za BeagleBone Black razvijen je poseban 		upravljački program Cape Manager koji je zadužen za prepoznavanje i učitavanje sklopovlja spojenog na platformu. Cape Manager omogućava
+	korisniku da učita uređaj u kernel u runtime-u. Ipak, uklanjanje uređaja nije tako jednostavno i uzrokuje kernel paniku u većini
+	slučajeva. 
+
+	
+	Device Tree Overlay i driver za audio kodek TLV320AIC3x
+	
+	
+ 
+	 
+	
+	 
+	
+	Device tree je način opisa hardvera preko podatkovnih struktura koje omogućuju opis sklopa. Alternativan način
+	bi 
+
+	    
+
+3. Zvuk i linux distribucija
+
+	ALSA 
+
+3. Audio kodek TLV320AIC3104
+	
+	TL320AIC3104 je low-power audio kodek. Uglavnom se primjenjuje u ugradbenim računalnim sustavima. Ima ugrađeno
+	stereo pojačalo za slušalice i više ulaza i izlaza koji su programabilni i mogu biti asimetrični ili diferencijalni.
+	Kodek s mikroprocesorom komunicira preko više sučelja. Kodek je kontroliran preko I2C sučelja. U registrima koji su
+	vidljivi putem I2C sučelja postavlja se brzina uzorkovanja ADP i DAP-a, širina riječi i audio protokol. Drugo sučelje
+	je sabirnica za prijenos audio podataka koje se može konfigurirati za rad u I2S, I2S Left-Justified, I2S Right-Justified modu.
+	U konkretnom sustavu koristi se I2S sabirnica, a na taj način je konfiguriran McASP modul na procesorskoj strani.
+
+	<--- BLOK SHEMA SPAJANJA INSTRUMENTA, UPRAVLJAČKE I PODATKOVNE SABIRNICE TE IZLAZA --->
+
+	Iako ima ugrađeno mikrofonsko predpojačalo ono se koristi za kondezatorske mikrofone kojima je potreban napon napajanja(bias voltage).
+	Zahtjevi sustava su na induktivna osjetila(dinamički mikrofon, električna gitara) koji ne trebaju napajanje, ali su naponske
+	razine signala puno niže od kapacitivnih osjetila. Stoga se koristi jedan diferencijalni ulaz. Na taj način nije potrebno
+	dodatno sklopovlje koje bi prilagodilo razinu signala za asimetrične ulaze kodeka. 
+	
+	
+
+4. Prilagodba audio signala
+	
+	
+
+5. Obradba audio signala u stvarnom vremenu na unix platformi
+
+	Obrada audio signala na UNIX platformi vrlo je dobro razvijena zahvaljujući open-source projektima baziranim
+	na ALSA upravljačkim programima. U ovom sustavu korišten je JACK* API. JACK API omogućuje apstrakciju visoke
+	razine koristeći ALSA upravljačke programe.U pozadini audio server koji je pokrenut preuzima uzorke od audio podsustava u kernelu i 		sprema ih na određenu memorijsku lokaciju. Nakon toga server obaviještava sve klijente o uzorcima koji se nalaze na memorijskoj 	lokaciji.
+	
+	Obaviještenje klijenta o uzorcima je zapravo poziv funkcije koja tada može obraditi podatke. Nakon odgovarajuće obrade uzoraka, uzorci 		se spremaju na drugu memorijsku lokaciju s koje će audio server podatke proslijediti drugom klijentu ili upravljačkim programima u 		kernelu koji podatke šalju audio kodeku.
+
+
+6. Algoritmi za obradu signala u stvarnom vremenu(vremenska i frekvencijska domena)
+
+	Za obradu signala u stvarnom vremenu implementirani su FIR filtri koji ostvaraju
+	neke najobičnije zvučne efekte poput odjeka, reverbracije, distorzije signala. 
+	Model sustava za distorziju signala svaki uzorak množi konstantnom vrijednošću i time ga pojačava. Nakon
+	pojačavanje uzorci se dovode do bloka zasićenja što znači da će se vrijednosti koje su iznad određene vrijednosti
+	smanjiti na upravo tu vrijednost.
+	
+	<--- SLIKA --->
+
+	<--- GRAF  --->
+
+	Prijenosna karakteristika odgovara karakteristici realnog operacijskog pojačala s bipolarnim napajanjem i zasićenjem.
+
+	Model sustava se reverbraciju je IIR(footnote) filtar čija je prijenosna funkcija:
+
+	<---- IZRAZ ---->
+
+	Impulsni odziv sustava je: 	
+	
+	<---- IZRAZ  ---->
+	
+	Implementacija sustava za reverbraciju zahtijeva implementaciju linije za kašnjenje uzoraka. Jedan
+	od načina implementacije je sljedeći:
+
+	<----- KOD ----->
+	
+	# DIO O EKVILAJZERU, BIQUAD FILTRIMA I BILINEARNOJ TRANSFORMACIJI ZA OSTVARENJE KONTINUIRANIH PRIJENOSNIH FUNKCIJA#
+	
+	Equalizer(ujednačivač) standardni je dio audio opreme za obradu zvuka. Svrha ujednačivača je ujednačiti frekvencijsku
+	karakteristiku signala odnosno po potrebi pojačati ili prigušiti određeni dio spektra signala. Implementirati se može
+	u frekvencijskoj ili vremenskoj domeni. U frekvencijskoj domeni ujednačavanje bi zahtijevalo obradu određnog broja uzoraka
+	na način da se koeficijenti dobiveni diskretnom Fourierovom transformacijom uzoraka množe odgovarajućim koeficijentima. Ipak, 		ujednačivači se većinom implementiraju kao kaskada bikvadratnih filtara. 
+	
+	Digitalni(FOOTNOTE: praktički diskretni) filtar se dobiva diskretizacijom odgovarajućeg analognog prototipa. Većina analognih
+	filtara za jednostavnu obradu signala je prvog i drugog reda ponajviše radi stabilnosti i jednostavnosti izvedbe. Frekvencijska
+	karakteristika analognog filtra prilikom diskretizacije mora biti očuvana pa se koristi bilinearna transformacija. Prilikom
+	diskretizacije bilinearnom transformacijom dolazi do promjene frekvencijskog mjerila. Zbog toga se za diskretizaciju koristi
+	modificirana bilinearna transformacija ili Tustinov diskretizacijski postupak. Modificirana bilinearna transformacija omogućava
+	da se za dovoljno malo vrijeme uzorkovanja karakteristika diskretnog filtra dobro opisuje karakteristiku analognog prototipa. 
+
+	Najčešće se za realizaciju ujednačivača koriste tzv. peakEQ i shelving filtri. Prijenosna funkcija peakEQ filtra je:
+	
+	-----------------PeakEQ H(s)
+
+	uvedemo li umjesto komplesne varijable s supstituciju za Tustinov postupak diskretizacije i preuredimo izraz:
+
+	-----------------PeakEQ H(z)
+
+	detaljan izvod u dodatku. 
+
+	Najjednostavnija implementacija ovakvog filtra je direktna I realizacija.
+
+	-----------------slika Direktna I realizacija općenitog bikvadratnog filtra---------------
+
+	Rekurzivna formula za direktnu I realizaciju dana je u nastavku:
+
+	-----------------kod------------------------------------------------------
+	
+	Rekurzivna formula ne ovisi o vrsti filtra. O vrsti filtra ovise samo koeficijenti. To je iznimno korisno jer s istom
+	implementacijom algoritma u računalu može biti ostvaren bilo koji filtar prvog ili drugog reda s poznatim koeficijentima.
+	
+	Ako se na istim uzorcima algoritam izvrši više puta zapravo je ostvarena filtarska kaskada. U nastavku je prikazan je peakEQ
+	filtar, a zatim i kaskada više peakEQ filtara.
+
+7. Softversko Sučelje za upravljanje procesom obrade signala u stvarnom vremenu
+	
+	Sučelje za upravljanje procesom čini http poslužitelj ostvaren na NodeJs platformi. Jednostavno
+	mu se pristupa preko ethernet sučelja. Kako bi sve promjene između klijentske i serverske strane
+	bile trenutne, koristi se socket.io. modul koji omogućava održavanje stalne veze i nakon što je
+	http zahtjev završen. Klijentsku stranu čine HTML kod i javascript uz korištenje jQuery API-a. Http modul
+	sastavni je dio NodeJs-a. Ipak, socket.io potrebno je instalirati iz ljuske pozivom naredbe:
+
+		<kod ljuske za socket.io install>  
+
+	Sučelje se sastoji od kliznika koji mijenjaju parametre za obradu signala. Pomak kliznika uzrokuje
+	poziv funkcije na serverskoj strani koja obaviještava aplikaciju za obradu audio signala o promjeni.
+	Međuprocesna komunikacija ostvarena je preko UNIX socketa. Za NodeJs postoji više implementiranih
+	modula za međuprocesnu komunikaciju. U ovom sustavu korišten je node-ipc. Instalaciju tog modula
+	moguće je učiniti iz ljuske pozivom naredbe: 
+
+		<kod ljuske za node-ipc install>
+
+8. Analiza programske podrške
+	
+	Programska podrška za sustav sastoji se od dva procesa. Prvi proces(FOOTNOTE-dalje u tekstu proces A) obrađuje uzorke audio signala,
+	obrađuje ih razlličitim algoritmima te komunicira sa periferijom BeagleBone Black-a odnosno upravlja LCD 
+	prikaznikom i očitava stanja sklopki. Drugi proces(Dalje u tekstu proces B) je Node.Js server koji korisniku omogućava promjenu
+	parametara obrade signala.
+	
+	---------------------------------DIJAGRAM--------------------------------------------------------------	
+
+	Proces A je višedretven kako se obrada signala ne bi usporavala. Zadaće pojedinih dretvi su: obrada uzoraka, komunikacija
+	s procesom B, provjeravanje stanja sklopki, iscrtavanje rezultata frekvencijske analize na LCD. 
+
+	---------------------------------DIJAGRAM---------------------------------------------------------------
+	
+	Obrada uzoraka signala
+	
+	
+	
+
+
+
+
+8. Među procesna komunikacija između sučelja i procesa obrade signala
+
+	Među procesna komunikacija između procesa obrade signala i sučelja odvija se putem UNIX socketa. UNIX socket 
+	omogućava vrlo brzu komunikaciju među procesima, a oblik komunikacije sličan je mrežnoj komunikaciji.
+
+9. Sklopovsko sučelje za upravljanje procesom obradbe signala
+	
+	Sklopovsko sučelje za upravljanje procesom obradbe signala sastoji se od 3 dvopoložajna pritisna prekidača i klasičnog
+	LCD prikaznika sa 16 puta 2 rasterom. Spojeni su na digitalne, ulaze i izlaze BeagleBone-a i kontroliraju se iz 
+	korisničkog prostora. Za potrebe kontroliranja digitalnih ulaza i izlaza koristi se GPIO periferija. Kako bi pojedini
+	fizički pin bio dodijeljen odgovarajućem GPIO ulazu ili izlazu potrebno je napraviti odgovarajući device tree overlay. 
+	
+	Mikrokontroler LCD-a spojen je s BeagleBone Black-om sa 8 linija. Od tih 8 linija 6 linija služi za komunikaciju
+	sa mikrokontrolerom LCD-a, a 2 linije za kontrolu pozadinskog svijetla i kontrasta. Pinovi koji su spojeni na podatkovne
+	linije moraju biti konfigurirani kao digitalni(GPIO) ulazi. Ako se koriste pinovi koji nisu alocirani ni za jednu drugu
+	funkciju na BeagleBone Black platformi(eMMC, HDMI) moguće ih je koristiti direktno nakon izvoza /sys/class/gpio kazalu. 
+	Inače potrebno je napraviti device tree overlay. Za konkretnu konfiguraciju spoja LCD-a i BeagleBone Black platforme to nije
+	potrebno raditi. Pinovi za kontrolu kontrasta i pozadinskog svijetla moraju biti konfigurirani kao pulsno širinski modulatori.
+	BeagleBone Black omogućuje kontrolu duty-cycle-a i frekvencije pulsno širinskih modulatora iz korisničkog prostora. Ipak, potrebno
+	je u Cape Manager učitati device tree overlay koji omogućuje odgovarajuće PWM kanale i signale takta. 
+
+10. Zaključak
+	
+	
+	
+
+	

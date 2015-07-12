@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=D7 Pin=D1-58
+Added Pin To Net: NetName=D7 Pin=D1-57
+Added Pin To Net: NetName=NetD1_53 Pin=D1-53
+Added Pin To Net: NetName=NetD1_53 Pin=H1-4
+Added Net: Name=NetD1_53
+Added Pin To Net: NetName=NetD1_55 Pin=D1-55
+Added Pin To Net: NetName=NetD1_55 Pin=H1-6
+Added Net: Name=NetD1_55
+Added Pin To Net: NetName=S1 Pin=D1-54
+Added Pin To Net: NetName=S1 Pin=S1-1
+Added Net: Name=S1
+Added Pin To Net: NetName=S2 Pin=D1-56
+Added Pin To Net: NetName=S2 Pin=S2-1
+Added Net: Name=S2
+Added Pin To Net: NetName=S3 Pin=D1-58
+Added Pin To Net: NetName=S3 Pin=S3-1
+Added Net: Name=S3
+Added Room: Name=audio_cape_sch

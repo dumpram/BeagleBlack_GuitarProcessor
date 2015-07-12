@@ -1,0 +1,50 @@
+.top {
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+.SliderEq {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    height: 250px;
+}       
+.LabelsEq {
+    margin-left: 40px;
+    color: white;
+}
+.Rack {
+    margin-left: 10px;
+}
+.RackStyle {
+                
+}
+.MainTheme {
+    background-color: #003a58;
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+.navbar {
+    color: #FFF;
+    font-size: 2em;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.6) none repeat scroll 0% 0%;
+    padding-left: 5px;
+    padding-top: 5px;
+    height: 50px;
+    width: 100%;
+}
+.title {
+    color: #FFF;
+    font-size: 2em;
+    font-weight: bold;  
+    padding-right: 325px;
+}
+.menu-item {
+    padding-right: 20px;
+    font-weight: bold;
+}
+a {
+    color: #FFF;
+}

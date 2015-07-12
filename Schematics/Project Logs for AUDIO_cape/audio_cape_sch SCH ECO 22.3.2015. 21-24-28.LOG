@@ -1,0 +1,7 @@
+Remove Pin=BBB?-1 From Net=DGND
+Remove Pin=BBB?-2 From Net=DGND
+Remove Pin=BBB?-47 From Net=DGND
+Remove Pin=BBB?-48 From Net=DGND
+Remove Pin=U1-17 From Net=AGND
+Remove Pin=U1-25 From Net=AUD_3V3
+Remove Pin=U1-26 From Net=AGND

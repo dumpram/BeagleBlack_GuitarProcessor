@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=D7 Pin=D1-57
+Removed Pin From Net: NetName=D6 Pin=D1-60
+Added Pin To Net: NetName=D7 Pin=D1-53
+Added Pin To Net: NetName=D6 Pin=D1-55
+Added Room: Name=audio_cape_sch

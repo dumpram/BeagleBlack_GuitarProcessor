@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=DGND Pin=C4-1
+Removed Pin From Net: NetName=3.3V Pin=C4-2
+Removed Pin From Net: NetName=DGND Pin=C12-1
+Removed Pin From Net: NetName=3.3V Pin=C12-2
+Removed Pin From Net: NetName=DGND Pin=C13-1
+Removed Pin From Net: NetName=3.3V Pin=C13-2
+Removed Pin From Net: NetName=DGND Pin=C14-1
+Removed Pin From Net: NetName=3.3V Pin=C14-2

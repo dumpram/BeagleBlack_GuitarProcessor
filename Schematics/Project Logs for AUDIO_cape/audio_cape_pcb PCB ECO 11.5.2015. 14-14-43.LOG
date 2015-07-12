@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=DGND Pin=C16-1
+Removed Pin From Net: NetName=DGND Pin=C18-1
+Added Pin To Net: NetName=AGND Pin=C16-1
+Added Pin To Net: NetName=AGND Pin=C18-1
+Added Member To Class: ClassName=audio_cape_sch Member=Component C5 100n

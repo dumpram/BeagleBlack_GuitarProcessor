@@ -1,0 +1,40 @@
+Added Component: Designator=C1(RAD-0.3)
+Added Component: Designator=C2(RAD-0.3)
+Added Component: Designator=C3(RAD-0.3)
+Added Component: Designator=C4(RAD-0.3)
+Added Component: Designator=C5(RAD-0.3)
+Added Component: Designator=C6(RAD-0.3)
+Added Component: Designator=C7(RAD-0.3)
+Added Component: Designator=U1(QUAD32-RHB)
+Added Component: Designator=VR1(DBV005)
+Added Pin To Net: NetName=DGND Pin=C1-1
+Added Pin To Net: NetName=1.8V Pin=C1-2
+Added Pin To Net: NetName=DGND Pin=C2-1
+Added Pin To Net: NetName=1.8V Pin=C2-2
+Added Pin To Net: NetName=DGND Pin=C3-1
+Added Pin To Net: NetName=3.3V Pin=C3-2
+Added Pin To Net: NetName=DGND Pin=C4-1
+Added Pin To Net: NetName=3.3V Pin=C4-2
+Added Pin To Net: NetName=AGND Pin=C5-1
+Added Pin To Net: NetName=AUD_3V3 Pin=C5-2
+Added Pin To Net: NetName=AGND Pin=C6-1
+Added Pin To Net: NetName=AUD_3V3 Pin=C6-2
+Added Pin To Net: NetName=DGND Pin=C7-1
+Added Pin To Net: NetName=3.3V Pin=C7-2
+Added Pin To Net: NetName=3.3V Pin=U1-7
+Added Pin To Net: NetName=AUD_3V3 Pin=U1-25
+Added Pin To Net: NetName=1.8V Pin=U1-32
+Added Pin To Net: NetName=3.3V Pin=VR1-1
+Added Pin To Net: NetName=DGND Pin=VR1-2
+Added Pin To Net: NetName=DGND Pin=VR1-3
+Added Pin To Net: NetName=1.8V Pin=VR1-5
+Added Member To Class: ClassName=audio_cape_sch Member=Component C1 Cap
+Added Member To Class: ClassName=audio_cape_sch Member=Component C2 Cap
+Added Member To Class: ClassName=audio_cape_sch Member=Component C3 Cap
+Added Member To Class: ClassName=audio_cape_sch Member=Component C4 Cap
+Added Member To Class: ClassName=audio_cape_sch Member=Component C5 Cap
+Added Member To Class: ClassName=audio_cape_sch Member=Component C6 Cap
+Added Member To Class: ClassName=audio_cape_sch Member=Component C7 Cap
+Added Member To Class: ClassName=audio_cape_sch Member=Component U1 TLV320AIC3104
+Added Member To Class: ClassName=audio_cape_sch Member=Component VR1 TPS76918
+Added Room: Name=audio_cape_sch

@@ -1,0 +1,64 @@
+Removed Pin From Net: NetName=1.8V Pin=C1-1
+Removed Pin From Net: NetName=DGND Pin=C1-2
+Removed Pin From Net: NetName=3.3V Pin=C3-1
+Removed Pin From Net: NetName=DGND Pin=C3-2
+Removed Pin From Net: NetName=3.3V Pin=C4-1
+Removed Pin From Net: NetName=DGND Pin=C4-2
+Removed Pin From Net: NetName=1.8V Pin=C15-1
+Removed Pin From Net: NetName=DGND Pin=C15-2
+Removed Pin From Net: NetName=AUD_3V3 Pin=C16-1
+Removed Pin From Net: NetName=DGND Pin=C16-2
+Removed Pin From Net: NetName=3.3V Pin=H1-2
+Removed Pin From Net: NetName=3.3V Pin=H1-3
+Removed Pin From Net: NetName=DGND Pin=H1-7
+Removed Pin From Net: NetName=DGND Pin=H1-8
+Removed Pin From Net: NetName=DGND Pin=H1-9
+Removed Pin From Net: NetName=DGND Pin=H1-10
+Removed Pin From Net: NetName=3.3V Pin=H1-15
+Removed Pin From Net: NetName=NetD1_76 Pin=R1-1
+Removed Pin From Net: NetName=3.3V Pin=R1-2
+Removed Pin From Net: NetName=NetD1_75 Pin=R2-1
+Removed Pin From Net: NetName=3.3V Pin=R2-2
+Removed Pin From Net: NetName=NetD1_74 Pin=R3-1
+Removed Pin From Net: NetName=3.3V Pin=R3-2
+Removed Member From Class: ClassName=audio_cape_sch Member=R1
+Removed Member From Class: ClassName=audio_cape_sch Member=R2
+Removed Member From Class: ClassName=audio_cape_sch Member=R3
+Change Component DesignItemId : Designator=C1 Old DesignItemId=elektrolitski_kondezator New DesignItemId=Cap
+Change Component DesignItemId : Designator=C3 Old DesignItemId=elektrolitski_kondezator New DesignItemId=Cap
+Change Component DesignItemId : Designator=C4 Old DesignItemId=elektrolitski_kondezator New DesignItemId=Cap
+Change Component DesignItemId : Designator=C15 Old DesignItemId=elektrolitski_kondezator New DesignItemId=Cap
+Change Component DesignItemId : Designator=C16 Old DesignItemId=elektrolitski_kondezator New DesignItemId=Cap
+Change Component Comment : Designator=C1 Old Comment=4.7u/16V/Ta New Comment=10u
+Change Component Comment : Designator=C3 Old Comment=10u/16V/Ta New Comment=10u
+Change Component Comment : Designator=C4 Old Comment=10u/16V/Ta New Comment=10u
+Change Component Comment : Designator=C15 Old Comment=10u/16V/Ta New Comment=10u
+Change Component Comment : Designator=C16 Old Comment=10u/16V/Ta New Comment=10u
+Change Component Description : Designator=C1 Old Description=Tantal elektrolitski kondezator New Description=Keramièki kondezator
+Change Component Description : Designator=C3 Old Description=Tantal elektrolitski kondezator New Description=Keramièki kondezator
+Change Component Description : Designator=C4 Old Description=Tantal elektrolitski kondezator New Description=Keramièki kondezator
+Change Component Description : Designator=C15 Old Description=Tantal elektrolitski kondezator New Description=Keramièki kondezator
+Change Component Description : Designator=C16 Old Description=Tantal elektrolitski kondezator New Description=Keramièki kondezator
+Change Component Library : Designator=C1 Old Library=audio_sch_lib.SchLib New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C3 Old Library=audio_sch_lib.SchLib New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C4 Old Library=audio_sch_lib.SchLib New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C15 Old Library=audio_sch_lib.SchLib New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C16 Old Library=audio_sch_lib.SchLib New Library=Miscellaneous Devices.IntLib
+Added Pin To Net: NetName=DGND Pin=C1-1
+Added Pin To Net: NetName=1.8V Pin=C1-2
+Added Pin To Net: NetName=DGND Pin=C3-1
+Added Pin To Net: NetName=3.3V Pin=C3-2
+Added Pin To Net: NetName=DGND Pin=C4-1
+Added Pin To Net: NetName=3.3V Pin=C4-2
+Added Pin To Net: NetName=DGND Pin=C15-1
+Added Pin To Net: NetName=1.8V Pin=C15-2
+Added Pin To Net: NetName=DGND Pin=C16-1
+Added Pin To Net: NetName=AUD_3V3 Pin=C16-2
+Added Pin To Net: NetName=5V Pin=D1-5
+Added Pin To Net: NetName=5V Pin=D1-6
+Added Pin To Net: NetName=5V Pin=H1-2
+Added Pin To Net: NetName=5V Pin=H1-15
+Added Net: Name=5V
+Added Pin To Net: NetName=NetH1_3 Pin=H1-3
+Added Net: Name=NetH1_3
+Added Room: Name=audio_cape_sch

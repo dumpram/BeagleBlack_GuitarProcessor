@@ -1,0 +1,9 @@
+------------------------------------------------------------
+Design Hierarchy Report for AUDIO_cape.PrjPCB
+-- 2.5.2015.
+-- 17:19:17
+------------------------------------------------------------
+
+main                          SCH        (main.SchDoc)
+    AudioCodec                SCH        (audio_codec.SchDoc)
+    BeagleBone                SCH        (beaglebone_black.SchDoc)

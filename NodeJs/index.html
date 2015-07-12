@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script src = "/socket.io/socket.io.js" > </script>
+    <script type=text/javascript src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+        var socket = io.connect();
+            socket.on('ledstatus', function (data) {
+                console.log(data);
+                $("body").css("background-color", data);
+            });
+    </script>
+    <script>
+    function ledOn(){
+      socket.emit('led', 'on');
+       
+    }
+    function ledOff(){
+      socket.emit('led', 'off');
+    }
+    function backlightOn() {
+        socket.emit('backlight_pwm', 'on')
+    }
+    
+    function backlightOff() {
+        socket.emit('backlight_pwm', 'off')
+    }
+    </script>
+</head> 
+ 
+<body>
+    <input type="button" name="on" id="onButton" value="on" onClick="ledOn();">
+    <input type="button" name="off" id="offButton" value="off" onClick="ledOff();">
+    </br>
+    <input type="button" name="backlight_on" id="backlightOnButton" value="on" onClick="backlightOn();">
+    <input type="button" name="backlight_off" id="backlightOffButton" value="off" onClick="backlightOff();">
+     
+</body>
+</html>

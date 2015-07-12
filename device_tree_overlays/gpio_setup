@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Compiling and copying GPIO overlay for DEP project"
+dtc -O dtb -o DEP-GPIO-Switch-00A0.dtbo -b 0 -@ DEP-GPIO-Switch.dts && echo "Compilation successful!"
+cp DEP-GPIO-Switch-00A0.dtbo /lib/firmware && echo "Overlay copied to /lib/firmware"
+

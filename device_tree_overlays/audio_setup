@@ -1,0 +1,5 @@
+#!/bin/bash
+
+dtc -O dtb -o BB-BONE-AUDI-02-00A0.dtbo -b 0 -@ BB-BONE-AUDI-02-00A0.dts
+cp BB-BONE-AUDI-02-00A0.dtbo /lib/firmware/BB-BONE-AUDI-02-00A0.dtbo
+

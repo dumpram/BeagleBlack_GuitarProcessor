@@ -1,0 +1,307 @@
+<html>
+    <head>
+        <title>PURI_AudioRack</title>
+        <meta charset="UTF-8"> 
+        <script src = "/socket.io/socket.io.js" > </script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="AudioRackStyle.css">
+        <script type="text/javascript">
+            
+            var socket = io.connect();
+                
+            $(function () {
+                $("#gain").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    socket.emit('gain', ui.value);
+        			    $("#gain-val").text($("#gain").slider("value"));
+        			},
+        			stop: function( event, ui ) {
+        			    socket.emit('gain', ui.value);
+        			    $("#gain-val").text($("#gain").slider("value"));
+        		    }
+                });
+                
+                $("#psaturation").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    socket.emit('psaturation', ui.value);
+        			    $("#psat-val").text($("#psaturation").slider("value"));
+        			},
+        			stop: function( event, ui ) {
+        			    socket.emit('psaturation', ui.value);
+        			    $("#psat-val").text($("#psaturation").slider("value"));
+        			}
+                });
+                
+                $("#nsaturation").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    socket.emit('nsaturation', ui.value);
+        			    $("#nsat-val").text($("#nsaturation").slider("value"));
+        			},
+        			stop: function( event, ui ) {
+        			    socket.emit('nsaturation', ui.value);
+        			    $("#nsat-val").text($("#nsaturation").slider("value"));
+        			}
+                });
+                
+                $("#decay").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    socket.emit('decay', ui.value);
+        			    $("#decay-val").text($("#decay").slider("value"));
+        			},
+        			stop:function( event, ui ) {
+        			    socket.emit('decay', ui.value);
+        			    $("#decay-val").text($("#decay").slider("value"));
+        			}
+                });
+                
+                $("#delay").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    socket.emit('delay', ui.value);
+        			    $("#delay-val").text($("#delay").slider("value"));
+        			},
+           			stop: function( event, ui ) {
+        			    socket.emit('delay', ui.value);
+        			    $("#delay-val").text($("#delay").slider("value"));
+        			}
+                });
+                
+                $("#eq_0").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    updateEq(0);
+        			},
+                    stop:  function( event, ui ) {
+         			    updateEq(0);
+        			}
+                });
+
+
+                $("#eq_1").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    updateEq(1);
+        			},
+                    stop:  function( event, ui ) {
+         			    updateEq(1);
+        			}
+                });
+                
+                $("#eq_2").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    updateEq(2);
+        			},
+                    stop:  function( event, ui ) {
+         			    updateEq(2);
+        			}
+                });
+                $("#eq_3").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    updateEq(3);
+        			},
+                    stop:  function( event, ui ) {
+         			    updateEq(3);
+        			}
+                });
+                $("#eq_4").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    updateEq(4);
+        			},
+                    stop:  function( event, ui ) {
+         			    updateEq(4);
+        			}
+                });
+                $("#eq_5").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    updateEq(5);
+        			},
+                    stop:  function( event, ui ) {
+         			    updateEq(5);
+        			}
+                });
+                
+                                
+                $("#eq_6").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 60,
+        			slide: function( event, ui ) {
+        			    updateEq(6);
+        			},
+                    stop:  function( event, ui ) {
+         			    updateEq(6);
+        			}
+                });
+                
+                                
+                $("#eq_7").slider({
+        			orientation: "vertical",
+        			range: "false",
+        			min: 0,
+        			max: 100,
+        			value: 0,
+        			slide: function( event, ui ) {
+        			    updateEq(7);
+        			},
+                    stop:  function( event, ui ) {
+         			    updateEq(7);
+        			}
+                });
+                
+                function updateEq(eq_id) {
+                    var eq_name = 'eq_' + eq_id; 
+                    socket.emit(eq_name, $("#" + eq_name).slider("value"));
+                    $("#" + eq_name + "-val").text(($("#" + eq_name).slider("value")-50)/4 +'dB');
+                }
+                
+                
+            
+
+                
+                $("#gain-val").text($("#gain").slider("value"));
+                $("#psat-val").text($("#psaturation").slider("value"));
+                $("#nsat-val").text($("#nsaturation").slider("value"));
+                $("#decay-val").text($("#decay").slider("value"));
+                $("#delay-val").text($("#delay").slider("value"));
+                $("#eq_0-val").text($("#eq_0").slider("value"));
+                $("#eq_1-val").text($("#eq_1").slider("value"));
+                $("#eq_2-val").text($("#eq_2").slider("value"));
+                $("#eq_3-val").text($("#eq_3").slider("value"));
+                $("#eq_4-val").text($("#eq_4").slider("value"));
+                $("#eq_5-val").text($("#eq_5").slider("value"));
+                $("#eq_6-val").text($("#eq_6").slider("value"));
+                $("#eq_7-val").text($("#eq_7").slider("value"));
+                updateEq(0);
+                updateEq(1);
+                updateEq(2);
+                updateEq(3);
+                updateEq(4);
+                updateEq(5);
+                updateEq(6);
+                updateEq(7);
+                
+            });
+    
+        </script>
+    </head>
+    <body class="MainTheme">
+        <div class="top">
+            <div class="navbar">
+            <table>
+            <tr>
+                <td><div class="title">PURI_AudioRacK</div></td>
+                <td><div class="menu-item"><a class="menu-item" href="Mixer">Mixer</a></div></td>
+                <td><div class="menu-item"><a class="menu-item" href="LCD_controls">LCDcontrols</a></div></td>
+                <td><div class="menu-item"><a class="menu-item" href="About">About</a></div></td>
+            </tr>
+            </table>
+        </div>
+        
+        </div>
+        <div class="Rack">
+        <h3>EQ_RACK</h3>
+        <table class="RackStyle">
+            <tr>
+                <td>64Hz: <div id="eq_0-val" class="LabelsEq"></div></td>
+                <td>125Hz: <div id="eq_1-val" class="LabelsEq"></div></td>
+                <td>250Hz: <div id="eq_2-val" class="LabelsEq"></div></td>
+                <td>500Hz: <div id="eq_3-val" class="LabelsEq"></div></td>
+                <td>1000Hz: <div id="eq_4-val" class="LabelsEq"></div></td>
+                <td>2000Hz: <div id="eq_5-val" class="LabelsEq"></div></td>
+                <td>4000Hz: <div id="eq_6-val" class="LabelsEq"></div></td>
+                <td>8000Hz: <div id="eq_7-val" class="LabelsEq"></div></td>
+            </tr>
+            <tr>
+                <td><div id="eq_0" class="SliderEq"></div></td>
+                <td><div id="eq_1" class="SliderEq"></div></td>
+                <td><div id="eq_2" class="SliderEq"></div></td>
+                <td><div id="eq_3" class="SliderEq"></div></td>
+                <td><div id="eq_4" class="SliderEq"></div></td>
+                <td><div id="eq_5" class="SliderEq"></div></td>
+                <td><div id="eq_6" class="SliderEq"></div></td>
+                <td><div id="eq_7" class="SliderEq"></div></td>
+            </tr>
+        </table>
+        <h3>DISTORTION_RACK</h3>
+        <table class="RackStyle">
+            <tr>
+                <td>GAIN: <div id="gain-val" class="LabelsEq"></div></td>
+                <td>PSAT: <div id="psat-val" class="LabelsEq"></div></td>
+                <td>NSAT: <div id="nsat-val" class="LabelsEq"></div></td>
+            </tr>
+            <tr>
+                <td><div id="gain" class="SliderEq"></div></td>
+                <td><div id="psaturation" class="SliderEq"></div></td>
+                <td><div id="nsaturation" class="SliderEq"></div></td>
+            </tr>
+        </table>
+        <h3>REVERB_RACK</h3>
+        <table class="RackStyle">
+            <tr>
+                <td>DECAY: <div id="decay-val" class="LabelsEq"></div></td>
+                <td>DELAY: <div id="delay-val" class="LabelsEq"></div></td>
+            </tr>
+            <tr>
+                <td><div id="decay" class="SliderEq"></div></td>
+                <td><div id="delay" class="SliderEq"></div></td>
+            </tr>
+        </table>
+        </div>
+    </body>
+</html>

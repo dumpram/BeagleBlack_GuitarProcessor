@@ -1,0 +1,3 @@
+wget -q -O - http://rpi.autostatic.com/autostatic.gpg.key | sudo apt-key add -
+wget -q -O /etc/apt/sources.list.d/autostatic-audio-raspbian.list http://rpi.autostatic.com/autostatic-audio-raspbian.list
+apt-get update

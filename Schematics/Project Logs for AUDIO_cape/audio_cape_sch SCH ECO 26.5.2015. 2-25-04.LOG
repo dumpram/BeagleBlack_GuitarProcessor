@@ -1,0 +1,41 @@
+Change Value of Parameter Cijena in Part A1 Old= New=11.28
+Change Value of Parameter Dobavljaè in Part A1 Old= New=Farnell
+Change Value of Parameter Kataloški broj in Part A1 Old= New=8461503
+Change Value of Parameter Cijena in Part J2 Old=5.70 New=2.20
+Change Value of Parameter Kataloški broj in Part J2 Old= New=2630504415
+Change Value of Parameter Cijena in Part L1 Old= New=1.31
+Change Value of Parameter Dobavljaè in Part L1 Old= New=Farnell
+Change Value of Parameter Kataloški broj in Part L1 Old= New=1635735
+Change Value of Parameter Cijena in Part L2 Old= New=1.31
+Change Value of Parameter Dobavljaè in Part L2 Old= New=Farnell
+Change Value of Parameter Kataloški broj in Part L2 Old= New=1635735
+Change Value of Parameter Cijena in Part S1 Old= New=1.67
+Change Value of Parameter Dobavljaè in Part S1 Old= New=Chipoteka
+Change Value of Parameter Kataloški broj in Part S1 Old= New=2630505010
+Change Value of Parameter Cijena in Part S2 Old= New=1.67
+Change Value of Parameter Dobavljaè in Part S2 Old= New=Chipoteka
+Change Value of Parameter Kataloški broj in Part S2 Old= New=2630505010
+Change Value of Parameter Cijena in Part S3 Old= New=1.67
+Change Value of Parameter Dobavljaè in Part S3 Old= New=Chipoteka
+Change Value of Parameter Kataloški broj in Part S3 Old= New=2630505010
+Change Value of Parameter Cijena in Part X1 Old= New=1.67
+Change Value of Parameter Dobavljaè in Part X1 Old= New=Chipoteka
+Change Value of Parameter Kataloški broj in Part X1 Old= New=2630505010
+Change Value of Parameter Cijena in Part X2 Old= New=1.67
+Change Value of Parameter Dobavljaè in Part X2 Old= New=Chipoteka
+Change Value of Parameter Kataloški broj in Part X2 Old= New=2630505010
+Change Value of Parameter Cijena in Part X3 Old= New=1.67
+Change Value of Parameter Dobavljaè in Part X3 Old= New=Chipoteka
+Change Value of Parameter Kataloški broj in Part X3 Old=Farnell New=2630505010
+Added Parameter Cijena=0.00 to Part D2
+Added Parameter Cijena=0.17 to Part R1
+Added Parameter Cijena=0.17 to Part R2
+Added Parameter Cijena=0.17 to Part R3
+Added Parameter Dobavljaè=Farnell to Part R1
+Added Parameter Dobavljaè=Farnell to Part R2
+Added Parameter Dobavljaè=Farnell to Part R3
+Added Parameter Dobavljaè=Texas Instruments to Part D2
+Added Parameter Kataloški broj=9332391 to Part R1
+Added Parameter Kataloški broj=9332391 to Part R2
+Added Parameter Kataloški broj=9332391 to Part R3
+Added Parameter Kataloški broj=TLV320AIC3104IRHBT to Part D2

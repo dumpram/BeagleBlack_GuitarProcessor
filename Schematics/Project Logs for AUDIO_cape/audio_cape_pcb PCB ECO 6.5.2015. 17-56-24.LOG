@@ -1,0 +1,150 @@
+Added Component: Designator=A1(DBV005)
+Added Component: Designator=C1(6-0805_N)
+Added Component: Designator=C2(6-0805_N)
+Added Component: Designator=C3(6-0805_N)
+Added Component: Designator=C4(6-0805_N)
+Added Component: Designator=C5(6-0805_N)
+Added Component: Designator=C6(6-0805_N)
+Added Component: Designator=C7(6-0805_N)
+Added Component: Designator=C12(6-0805_N)
+Added Component: Designator=C13(6-0805_N)
+Added Component: Designator=C14(6-0805_N)
+Added Component: Designator=C15(6-0805_N)
+Added Component: Designator=C16(6-0805_N)
+Added Component: Designator=C17(6-0805_N)
+Added Component: Designator=C18(6-0805_N)
+Added Component: Designator=H1(SIP16)
+Added Component: Designator=J2(STEZALJKA_3P_5MM)
+Added Component: Designator=L1(6-0805_N)
+Added Component: Designator=L2(6-0805_N)
+Added Component: Designator=R1(6-0805_N)
+Added Component: Designator=R2(6-0805_N)
+Added Component: Designator=R3(6-0805_N)
+Added Component: Designator=S1(STEZALJKA_2P_5MM)
+Added Component: Designator=S2(STEZALJKA_2P_5MM)
+Added Component: Designator=S3(STEZALJKA_2P_5MM)
+Added Component: Designator=X1(STEZALJKA_2P_5MM)
+Added Component: Designator=X2(STEZALJKA_2P_5MM)
+Added Component: Designator=X3(STEZALJKA_2P_5MM)
+Added Pin To Net: NetName=3.3V Pin=A1-1
+Added Pin To Net: NetName=DGND Pin=A1-2
+Added Pin To Net: NetName=DGND Pin=A1-3
+Added Pin To Net: NetName=DGND Pin=A1-4
+Added Pin To Net: NetName=1.8V Pin=A1-5
+Added Pin To Net: NetName=1.8V Pin=C1-1
+Added Pin To Net: NetName=DGND Pin=C1-2
+Added Pin To Net: NetName=DGND Pin=C2-1
+Added Pin To Net: NetName=3.3V Pin=C2-2
+Added Pin To Net: NetName=3.3V Pin=C3-1
+Added Pin To Net: NetName=DGND Pin=C3-2
+Added Pin To Net: NetName=3.3V Pin=C4-1
+Added Pin To Net: NetName=DGND Pin=C4-2
+Added Pin To Net: NetName=DGND Pin=C5-1
+Added Pin To Net: NetName=3.3V Pin=C5-2
+Added Pin To Net: NetName=DGND Pin=C6-1
+Added Pin To Net: NetName=3.3V Pin=C6-2
+Added Pin To Net: NetName=DGND Pin=C7-1
+Added Pin To Net: NetName=3.3V Pin=C7-2
+Added Pin To Net: NetName=DGND Pin=C12-1
+Added Pin To Net: NetName=3.3V Pin=C12-2
+Added Pin To Net: NetName=DGND Pin=C13-1
+Added Pin To Net: NetName=3.3V Pin=C13-2
+Added Pin To Net: NetName=DGND Pin=C14-1
+Added Pin To Net: NetName=3.3V Pin=C14-2
+Added Pin To Net: NetName=1.8V Pin=C15-1
+Added Pin To Net: NetName=DGND Pin=C15-2
+Added Pin To Net: NetName=AUD_3V3 Pin=C16-1
+Added Pin To Net: NetName=DGND Pin=C16-2
+Added Pin To Net: NetName=DGND Pin=C17-1
+Added Pin To Net: NetName=1.8V Pin=C17-2
+Added Pin To Net: NetName=DGND Pin=C18-1
+Added Pin To Net: NetName=AUD_3V3 Pin=C18-2
+Added Pin To Net: NetName=NetD1_54 Pin=D1-54
+Added Pin To Net: NetName=NetD1_56 Pin=D1-56
+Added Pin To Net: NetName=D7 Pin=D1-58
+Added Pin To Net: NetName=D6 Pin=D1-60
+Added Pin To Net: NetName=D5 Pin=D1-62
+Added Pin To Net: NetName=D4 Pin=D1-64
+Added Pin To Net: NetName=NetD1_74 Pin=D1-74
+Added Pin To Net: NetName=NetD1_75 Pin=D1-75
+Added Pin To Net: NetName=NetD1_76 Pin=D1-76
+Added Pin To Net: NetName=MIC1LP Pin=D2-10
+Added Pin To Net: NetName=MIC1LM Pin=D2-11
+Added Pin To Net: NetName=HPLOUT Pin=D2-19
+Added Pin To Net: NetName=HPROUT Pin=D2-23
+Added Pin To Net: NetName=LEFT_LOP Pin=D2-27
+Added Pin To Net: NetName=LEFT_LOM Pin=D2-28
+Added Pin To Net: NetName=RIGHT_LOP Pin=D2-29
+Added Pin To Net: NetName=RIGHT_LOM Pin=D2-30
+Added Pin To Net: NetName=DGND Pin=H1-1
+Added Pin To Net: NetName=3.3V Pin=H1-2
+Added Pin To Net: NetName=3.3V Pin=H1-3
+Added Pin To Net: NetName=NetD1_54 Pin=H1-4
+Added Pin To Net: NetName=DGND Pin=H1-5
+Added Pin To Net: NetName=NetD1_56 Pin=H1-6
+Added Pin To Net: NetName=DGND Pin=H1-7
+Added Pin To Net: NetName=DGND Pin=H1-8
+Added Pin To Net: NetName=DGND Pin=H1-9
+Added Pin To Net: NetName=DGND Pin=H1-10
+Added Pin To Net: NetName=D4 Pin=H1-11
+Added Pin To Net: NetName=D5 Pin=H1-12
+Added Pin To Net: NetName=D6 Pin=H1-13
+Added Pin To Net: NetName=D7 Pin=H1-14
+Added Pin To Net: NetName=3.3V Pin=H1-15
+Added Pin To Net: NetName=DGND Pin=H1-16
+Added Pin To Net: NetName=AGND Pin=J2-1
+Added Pin To Net: NetName=HPLOUT Pin=J2-2
+Added Pin To Net: NetName=HPROUT Pin=J2-3
+Added Pin To Net: NetName=DGND Pin=L1-1
+Added Pin To Net: NetName=AGND Pin=L1-2
+Added Pin To Net: NetName=3.3V Pin=L2-1
+Added Pin To Net: NetName=AUD_3V3 Pin=L2-2
+Added Pin To Net: NetName=NetD1_76 Pin=R1-1
+Added Pin To Net: NetName=3.3V Pin=R1-2
+Added Pin To Net: NetName=NetD1_75 Pin=R2-1
+Added Pin To Net: NetName=3.3V Pin=R2-2
+Added Pin To Net: NetName=NetD1_74 Pin=R3-1
+Added Pin To Net: NetName=3.3V Pin=R3-2
+Added Pin To Net: NetName=NetD1_74 Pin=S1-1
+Added Pin To Net: NetName=DGND Pin=S1-2
+Added Pin To Net: NetName=NetD1_75 Pin=S2-1
+Added Pin To Net: NetName=DGND Pin=S2-2
+Added Pin To Net: NetName=NetD1_76 Pin=S3-1
+Added Pin To Net: NetName=DGND Pin=S3-2
+Added Pin To Net: NetName=LEFT_LOP Pin=X1-1
+Added Pin To Net: NetName=LEFT_LOM Pin=X1-2
+Added Pin To Net: NetName=RIGHT_LOP Pin=X2-1
+Added Pin To Net: NetName=RIGHT_LOM Pin=X2-2
+Added Pin To Net: NetName=MIC1LP Pin=X3-1
+Added Pin To Net: NetName=MIC1LM Pin=X3-2
+Added Member To Class: ClassName=audio_cape_sch Member=Component A1 TPS76918
+Added Member To Class: ClassName=audio_cape_sch Member=Component C1 4.7u/16V/Ta
+Added Member To Class: ClassName=audio_cape_sch Member=Component C2 100n
+Added Member To Class: ClassName=audio_cape_sch Member=Component C3 10u/16V/Ta
+Added Member To Class: ClassName=audio_cape_sch Member=Component C4 10u/16V/Ta
+Added Member To Class: ClassName=audio_cape_sch Member=Component C5 100n
+Added Member To Class: ClassName=audio_cape_sch Member=Component C6 100n
+Added Member To Class: ClassName=audio_cape_sch Member=Component C7 100n
+Added Member To Class: ClassName=audio_cape_sch Member=Component C12 100n
+Added Member To Class: ClassName=audio_cape_sch Member=Component C13 100n
+Added Member To Class: ClassName=audio_cape_sch Member=Component C14 100n
+Added Member To Class: ClassName=audio_cape_sch Member=Component C15 10u/16V/Ta
+Added Member To Class: ClassName=audio_cape_sch Member=Component C16 10u/16V/Ta
+Added Member To Class: ClassName=audio_cape_sch Member=Component C17 100n
+Added Member To Class: ClassName=audio_cape_sch Member=Component C18 100n
+Added Member To Class: ClassName=audio_cape_sch Member=Component D1 Cape header
+Added Member To Class: ClassName=audio_cape_sch Member=Component D2 TLV320AIC3104
+Added Member To Class: ClassName=audio_cape_sch Member=Component H1 lcd_16x2
+Added Member To Class: ClassName=audio_cape_sch Member=Component J2 headphone_output
+Added Member To Class: ClassName=audio_cape_sch Member=Component L1 Ferit
+Added Member To Class: ClassName=audio_cape_sch Member=Component L2 Ferit
+Added Member To Class: ClassName=audio_cape_sch Member=Component R1 10k
+Added Member To Class: ClassName=audio_cape_sch Member=Component R2 10k
+Added Member To Class: ClassName=audio_cape_sch Member=Component R3 10k
+Added Member To Class: ClassName=audio_cape_sch Member=Component S1 SW-PB
+Added Member To Class: ClassName=audio_cape_sch Member=Component S2 SW-PB
+Added Member To Class: ClassName=audio_cape_sch Member=Component S3 SW-PB
+Added Member To Class: ClassName=audio_cape_sch Member=Component X1 mono_jack
+Added Member To Class: ClassName=audio_cape_sch Member=Component X2 mono_jack
+Added Member To Class: ClassName=audio_cape_sch Member=Component X3 mono_jack
+Added Room: Name=audio_cape_sch

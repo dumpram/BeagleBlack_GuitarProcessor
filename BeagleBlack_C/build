@@ -1,0 +1,3 @@
+echo "Building lcd test for BB Black LCD..."
+cc -o lcd_test.o lcd_test.c beagleblack_gpio.c beagleblack_lcd.c && echo "Build is successful!"
+

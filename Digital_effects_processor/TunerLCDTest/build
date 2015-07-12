@@ -1,0 +1,2 @@
+echo ">>>>>>>>>>>>>>>>>Building LCD tuner test!<<<<<<<<<<<<<<<<<<<"
+gcc lcd_test.c beagleblack_lcd.c beagleblack_gpio.c -o test && echo "Build is successful"

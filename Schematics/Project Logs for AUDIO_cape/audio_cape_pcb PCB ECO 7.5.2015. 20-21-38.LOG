@@ -1,0 +1,5 @@
+Added Component: Designator=R4(TRIMER)
+Added Pin To Net: NetName=5V Pin=R4-1
+Added Pin To Net: NetName=NetH1_3 Pin=R4-2
+Added Pin To Net: NetName=DGND Pin=R4-3
+Added Member To Class: ClassName=audio_cape_sch Member=Component R4 TRIMER

@@ -1,0 +1,66 @@
+Protel Design System Design Rule Check
+PCB File : D:\Hrcova sranja\Faks\zavrsni2015\audio_shield\Schematics\audio_cape_pcb.PcbDoc
+Date     : 10.6.2015.
+Time     : 16:22:03
+
+Processing Rule : Clearance Constraint (Gap=15mil) (InPolygon),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=1mil) (InComponent('A1')),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.394mil) (InComponent('D2')),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=8mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=5mil) (Max=999mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=6.89mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk primitive without silk layer
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (5290.001mil,1639.999mil)(5290.001mil,1779.999mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (5150.001mil,1639.999mil)(5290.001mil,1639.999mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2559.999mil,1639.999mil)(2559.999mil,1779.999mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2559.999mil,1639.999mil)(2699.999mil,1639.999mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (2559.999mil,4290.001mil)(2699.999mil,4290.001mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (5290.001mil,4150.001mil)(5290.001mil,4290.001mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Track (5150.001mil,4290.001mil)(5290.001mil,4290.001mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "headphone_output" (3955.988mil,1387.76mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "mono_jack" (5233.35mil,1572.799mil)  Top Overlay
+   Violation between Silk To Board Region Clearance (Out of silkscreen region) : Text "mono_jack" (5823.902mil,2269.65mil)  Top Overlay
+Rule Violations :10
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 10
+Time Elapsed        : 00:00:01

@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=DGND Pin=D2-21
+Added Pin To Net: NetName=AGND Pin=D2-21
+Added Room: Name=audio_cape_sch

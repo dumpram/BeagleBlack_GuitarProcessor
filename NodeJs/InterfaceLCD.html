@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>LCD Control</title>
+        <script src = "/socket.io/socket.io.js" > </script>
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        
+        <script type="text/javascript">
+            
+            var socket = io.connect();
+            
+            $(function () {
+                $("#backlight_pwm").slider();
+                
+                    var startPos = '$("#backlight_pwm").slider("value");', endPos = '';
+                    
+                    $("#backlight_pwm").on("slidestop", function (event, ui) {
+                        endPos = ui.value;
+    
+                        if (startPos != endPos) {
+                            socket.emit('backlight_pwm', ui.value);
+                        }
+                        
+                        startPos = endpos;
+                    });
+                });
+                
+            $(function () {
+                $("#contrast_pwm").slider();
+                
+                    var startPos = '$("#contrast_pwm").slider("value");', endPos = '';
+                    
+                    $("#contrast_pwm").on("slidestop", function (event, ui) {
+                        endPos = ui.value;
+    
+                        if (startPos != endPos) {
+                            socket.emit('contrast_pwm', ui.value);
+                        }
+                        
+                        startPos = endpos;
+                    });
+                });
+            $(function () {
+                $("#lcd_send").button();
+                $("#lcd_send").click(function() {
+                    socket.emit('lcd_message', $("#lcd_message").val());
+                    $("#lcd_message").val('');
+                });
+            });
+        </script>
+    </head>
+    
+    <body>
+        <h3>LCD message</h3>
+        <textarea rows="1" cols="50" id="lcd_message"></textarea>
+        </br></br>
+        <div id="lcd_send">Send</div>
+        <h3>Backlight control slider</h3>
+        <div id="backlight_pwm"></div>
+        <h3>Contrast control slider</h3>
+        <div id="contrast_pwm"></div>
+    </body>
+</html>

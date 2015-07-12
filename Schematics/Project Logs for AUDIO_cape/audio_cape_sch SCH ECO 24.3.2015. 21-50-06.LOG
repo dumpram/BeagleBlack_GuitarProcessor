@@ -1,0 +1,6 @@
+Remove Pin=U1-21 From Net=DGND
+Remove Pin=U1-24 From Net=3.3V
+Change Pin Designator/Name:  Old Designator=S1-1 Old Name=LEFT_LOP New Designator =LEFT_LOM New Name=2
+Change Pin Designator/Name:  Old Designator=S1-2 Old Name=LEFT_LOM New Designator =LEFT_LOP New Name=1
+Change Pin Designator/Name:  Old Designator=S1-3 Old Name=RIGHT_LOP New Designator =RIGHT_LOM New Name=4
+Change Pin Designator/Name:  Old Designator=S1-4 Old Name=RIGHT_LOM New Designator =RIGHT_LOP New Name=3

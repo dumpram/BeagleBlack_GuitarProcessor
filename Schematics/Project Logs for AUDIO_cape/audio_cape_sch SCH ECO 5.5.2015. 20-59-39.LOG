@@ -1,0 +1,12 @@
+Change Component Parameter Description in D1 Old= New=BeagleBone Black
+Change Component Parameter Description in D2 Old= New=Audio ADP/DAP
+Change Component Parameter Description in H1 Old= New=16x2 LCD prikaznik
+Change Component Parameter Description in J2 Old=3.5 mm jack New=Prikljuèak za slušalice
+Change Component Parameter Description in L1 Old= New=Feritna jezgra
+Change Component Parameter Description in L2 Old= New=Feritna jezgra
+Change Component Parameter Description in S1 Old=Switch New=Prekidaè-pritisni
+Change Component Parameter Footprint in S1 Old=SPST-2 New=STEZALJKA_2P_5MM
+Change Component Parameter Description in S2 Old=Switch New=Prekidaè-pritisni
+Change Component Parameter Footprint in S2 Old=SPST-2 New=STEZALJKA_2P_5MM
+Change Component Parameter Description in S3 Old=Switch New=Prekidaè-pritisni
+Change Component Parameter Footprint in S3 Old=SPST-2 New=STEZALJKA_2P_5MM

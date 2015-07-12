@@ -1,0 +1,10 @@
+Output: Report Project Hierarchy
+Type  : ReportHierarchy
+From  : Variant [[No Variations]] of Project [AUDIO_cape.PrjPCB]
+   Generated File[beaglebone_black.REP]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 17:19:17 On 2.5.2015.

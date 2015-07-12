@@ -1,0 +1,8 @@
+Added Pin To Net: NetName=5V Pin=D1-5
+Added Pin To Net: NetName=5V Pin=D1-6
+Added Pin To Net: NetName=5V Pin=D1-8
+Added Pin To Net: NetName=DGND Pin=D1-43
+Added Pin To Net: NetName=DGND Pin=D1-45
+Added Pin To Net: NetName=DGND Pin=D1-46
+Added Member To Class: ClassName=audio_cape_sch Member=Component D1 beaglebone_black
+Added Room: Name=audio_cape_sch
