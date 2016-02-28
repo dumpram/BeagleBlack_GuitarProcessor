@@ -23,12 +23,12 @@ Audio Cape schematics can be found in Schematics directory. They were created wi
 ## 3. Prototype
 Below you can see images of prototype Digital Guitar Effects processor:
 
-![Cape board](/images/Cape.JPG)
-![Cape board installed on BeagleBone Black](/images/CapeBBB.JPG)
-![Installing BeagleBone Black in box 1](/images/Installing_1.JPG)
-![Installing BeagleBone Black in box 2](/images/Installing_2.JPG)
-![Installing BealgeBone Black in box 3](/images/Installing_3.JPG)
-![Final look](/image/Final.JPG)
+![Cape board](/Images/Cape.JPG)
+![Cape board installed on BeagleBone Black](/Images/CapeBBB.JPG)
+![Installing BeagleBone Black in box 1](/Images/Installing_1.JPG)
+![Installing BeagleBone Black in box 2](/Images/Installing_2.JPG)
+![Installing BealgeBone Black in box 3](/Images/Installing_3.JPG)
+![Final look](/Images/Final.JPG)
 
 
 
